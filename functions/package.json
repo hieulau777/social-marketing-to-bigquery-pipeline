@@ -1,0 +1,44 @@
+{
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@types/underscore": "^1.11.4",
+    "axios": "^0.27.2",
+    "date-fns": "^2.29.3",
+    "dotenv": "^16.0.3",
+    "firebase-admin": "^11.4.1",
+    "firebase-functions": "^3.18.0",
+    "iso-3166-1": "^2.1.1",
+    "iterable-ndjson": "^1.1.0",
+    "json-2-csv": "^3.18.0",
+    "lodash.merge": "^4.6.2",
+    "ndjson": "^2.0.0",
+    "node-fetch": "^2.6.7",
+    "underscore": "^1.13.6"
+  },
+  "devDependencies": {
+    "@types/lodash.merge": "^4.6.7",
+    "@types/ndjson": "^2.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
